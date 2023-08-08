@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:telkom_career/data/repository/add_education/add_education_repository_impl.dart';
 import 'package:telkom_career/data/repository/company/company_data_repository_impl.dart';
 import 'package:telkom_career/data/repository/listjob/list_job_repository_impl.dart';
 import 'package:telkom_career/data/repository/lists_company_repository/lists_company_data_repository_impl.dart';
@@ -15,6 +16,7 @@ import 'package:telkom_career/presentation/pages/profile/cubit/profile_data_cubi
 import 'package:telkom_career/presentation/pages/register/cubit/register_cubit.dart';
 import 'package:telkom_career/presentation/pages/search/cubit/lists_company_data_cubit.dart';
 
+import 'presentation/pages/add_education/cubit/education_cubit.dart';
 import 'presentation/pages/company/cubit/about_company_data_cubit.dart';
 import 'presentation/pages/company/cubit/jobs_company_data_cubit.dart';
 
@@ -59,6 +61,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => ProfileDataCubit(ProfileDataRepositoryImpl()),
+        ),
+        BlocProvider(
+          create: (context) => EducationCubit(UpdateEducationRepositoryImpl()),
         ),
       ],
       child: MaterialApp.router(

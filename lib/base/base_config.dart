@@ -36,4 +36,5 @@ abstract class BaseConfig {
 
   // PROFILE
   static const String PROFILE_DATA = "/profile";
+  static const String addeducation = "/education";
 }

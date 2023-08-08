@@ -3,6 +3,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:telkom_career/domain/base/authentication_header_request.dart';
+import 'package:telkom_career/presentation/pages/add_education/input_education.dart';
 import 'package:telkom_career/presentation/pages/company/cubit/company_data_cubit.dart';
 import 'package:telkom_career/presentation/pages/jobs/cubit/list_job_cubit.dart';
 import 'package:telkom_career/presentation/pages/profile/cubit/profile_data_cubit.dart';
@@ -105,6 +106,10 @@ final GoRouter saRouter = GoRouter(initialLocation: "/loginmoc", routes: [
       path: "/experience",
       name: Routes.workexperience,
       builder: (context, state) => const WorkExperience()),
+  GoRoute(
+      path: "/education",
+      name: Routes.inputeducation,
+      builder: (context, state) => const InputEducation()),
 
   // SEARCH //
   GoRoute(

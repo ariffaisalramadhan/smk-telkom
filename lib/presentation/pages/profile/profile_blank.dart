@@ -332,14 +332,17 @@ class _ProfileBlankState extends State<ProfileBlank> {
                                 alignment: Alignment.topRight,
                                 margin:
                                     const EdgeInsets.only(top: 8, right: 15),
-                                child: const Text(
-                                  "Tambah",
-                                  textAlign: TextAlign.end,
-                                  style: TextStyle(
-                                    fontFamily: "inter_semibold",
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color(0xffEA232A),
+                                child: InkWell(
+                                  onTap: () => context.go('//education'),
+                                  child: const Text(
+                                    "Tambah",
+                                    textAlign: TextAlign.end,
+                                    style: TextStyle(
+                                      fontFamily: "inter_semibold",
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xffEA232A),
+                                    ),
                                   ),
                                 ),
                               ),
